@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task4</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+                $( ".toggle" ).click(function() {
+                    $(".div").toggle("slow")
+                });
+
+                $( ".enlarge" ).click(function() {
+                    $(".div").css("font-size","200px")
+
+                });
+
+                $( ".Reduce" ).click(function() {
+                    $(".div").css("font-size","10px")
+
+                });
+
+                $( ".Original" ).click(function() {
+                    $(".div").css("font-size","")
+
+                });
+
+                $( ".nth" ).click(function() {
+                    para=prompt("which para u want to be selected")
+                    
+                    $("p:nth-child("+para+")").css("background-color","orange").append(" woohoo on purpose")
+
+                });
+            })
+    </script>
+</head>
+<body>
+
+    <div class="div">DIV1</div>
+    <div class="div">DIV2</div>
+    <div class="div">DIV3</div>
+  
+
+    <button class="toggle">Toggle</button>
+    <button class="enlarge">Enlarge</button>
+    <button class="Original">Original</button>
+    <button class="Reduce">Reduce</button>
+</body>
+</html>

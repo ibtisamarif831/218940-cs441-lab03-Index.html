@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab3</title>
+
+    <script>
+
+        function getValue(event){
+            var sum=0;
+            var input = document.getElementById("myInput").value;
+          
+            if (event.keyCode === 48 || event.keyCode === 96 ) {
+             event.preventDefault();
+             
+             console.log(input.split(''))
+
+             for(i=0; i<input.length; i++){
+                 sum=parseInt(input[i]) + sum;
+
+             }
+             console.log(sum)
+            }
+        }
+        </script>
+    
+
+</head>
+
+
+<body>
+    <label for="sumn">Please enter any number and press zero for sum</label>
+    <input id="myInput" value="" onkeydown=getValue(event) type="number">
+
+
+</body>
+</html>

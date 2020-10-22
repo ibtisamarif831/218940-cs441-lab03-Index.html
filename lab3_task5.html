@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task5</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+                $( ".odd" ).click(function() {
+                    $("p:nth-child(odd)").css("background-color", "yellow")
+                });
+
+                $( ".even" ).click(function() {
+                    $("p:nth-child(even)").css("background-color","red")
+
+                });
+
+                $( ".first" ).click(function() {
+                    $("p:first").css("background-color","purple")
+
+                });
+
+                $( ".last" ).click(function() {
+                    $("p:last").css("background-color","blue")
+
+                });
+
+                $( ".nth" ).click(function() {
+                    para=prompt("which para u want to be selected")
+                    
+                    $("p:nth-child("+para+")").css("background-color","orange").append(" woohoo on purpose")
+
+                });
+            })
+    </script>
+</head>
+<body>
+    <p class="para1">para1</p>
+    <p class="para2">Para2</p>
+    <p class="para3">Para3</p>
+    <p class="para4">para4</p>
+    <p class="para5">para5</p>
+
+    <button class="odd">Odd</button>
+    <button class="even">Even</button>
+    <button class="first">First</button>
+    <button class="last">last</button>
+
+    <button class="nth">Which para</button>
+</body>
+</html>
